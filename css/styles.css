@@ -13,6 +13,8 @@
 body {
   font-family: var(--main-font);
   font-style: normal;
+  width: 1600px;
+  margin: 0 auto;
 }
 
 .list {
@@ -110,11 +112,13 @@ body {
 }
 
 .address-list-item:not(:first-child) {
-  margin-left: 50px;
+  margin-left: 30px;
 }
 
 .header-mail-link,
 .header-tel-link {
+  display: flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -124,17 +128,34 @@ body {
   letter-spacing: 0.02em;
   color: var(--description-color);
 }
+.header-mail-link > svg,
+.header-tel-link > svg {
+  fill: #757575;
+  margin-right: 10px;
+}
+
+.header-mail-link:hover > svg,
+.header-tel-link:hover > svg {
+  fill: #2196f3;
+}
+
 /* =============== END HEADER ===================== */
 
 /* =============== HERO ===================== */
 .hero {
-  background-color: #2f303a;
+  background-color: #c4c4c4;
   text-align: center;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/mainpage/bd-hero.jpg);
+  background-repeat: no-repeat;
+  object-position: center;
+  object-fit: contain;
 }
 
 .hero .container {
-  display: flex;
-  flex-direction: column;
   padding: 200px 250px;
 }
 
@@ -316,6 +337,31 @@ body {
 .adress-list-map,
 .adress-list-mail {
   margin-bottom: 10px;
+}
+
+.footer .container {
+  display: flex;
+}
+
+.footer-social-links {
+  margin-left: 85px;
+}
+
+.footer-social-links > p {
+  margin-top: 12px;
+  margin-bottom: 0px;
+
+  color: var(--title-dark-theme-color);
+  font-family: var(--secondary-font);
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.footer-social-link {
+  background: #000;
 }
 
 /* =============== END FOOTER ===================== */
