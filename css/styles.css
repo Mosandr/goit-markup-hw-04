@@ -349,7 +349,7 @@ body {
 
 .footer-social-links > p {
   margin-top: 12px;
-  margin-bottom: 0px;
+  margin-bottom: 20px;
 
   color: var(--title-dark-theme-color);
   font-family: var(--secondary-font);
@@ -360,8 +360,30 @@ body {
   text-transform: uppercase;
 }
 
+.social-links {
+  display: flex;
+}
+
+.social-link-item:not(:first-child) {
+  margin-left: 10px;
+}
+
 .footer-social-link {
-  background: #000;
+  display: flex;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.footer-social-link:hover {
+  background-color: var(--accent-color);
+}
+
+.footer-social-link > svg {
+  align-self: center;
+  fill: var(--title-dark-theme-color);
 }
 
 /* =============== END FOOTER ===================== */
